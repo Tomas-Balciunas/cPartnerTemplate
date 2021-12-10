@@ -1,6 +1,7 @@
 @font-face {
   font-family: sans-book;
   src: url(../../src/OfficinaSansITCPro-Book.ttf);
+  font-display: swap;
 }
 
 html, body {
@@ -40,7 +41,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid #3da4e9;
+  border: 2px solid #1fbde4;
   border-radius: 5px;
   cursor: pointer;
   margin-right: 2em;
@@ -48,7 +49,7 @@ html, body {
 
 .hollowButton .offerLink {
   text-decoration: none;
-  padding: 1em;
+  padding: 0.7em 1em 0.7em 1em;
 }
 
 .filledButton {
@@ -65,7 +66,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  background-color: #3da4e9;
+  background-color: #1fbde4;
   cursor: pointer;
   margin-right: 2em;
   color: white;
@@ -78,7 +79,39 @@ html, body {
 
 .filledButton .offerLink {
   text-decoration: none;
-  padding: 1em;
+  padding: 0.7em 1em 0.7em 1em;
+}
+
+.aPicInfo {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.aPicInfo .aPicInfoTop {
+  padding: 0.3em;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.aPicInfo .aPicInfoBot {
+  color: white;
+  margin: 60% 0 0 6%;
+  font-size: 0.9em;
+}
+
+.aPicInfo .aPicInfoBot h1 {
+  margin-top: 0.3em;
+}
+
+.aPicInfo .aPicInfoBot p {
+  margin-bottom: 0;
 }
 
 header {
@@ -142,6 +175,12 @@ header #headerContainer #headerCont #headerLang {
   position: relative;
   max-width: 100%;
   margin: 4em 0 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #bannerContainer img {
@@ -150,36 +189,41 @@ header #headerContainer #headerCont #headerLang {
 
 #bannerContainer .content {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
-  left: 50%;
   width: 80em;
-  margin-top: 10%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin-top: 8%;
 }
 
 #bannerContainer .content .bannerText {
-  border: solid black 1px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 20em;
+  width: 18em;
   color: white;
-  float: left;
+}
+
+#bannerContainer .content .bannerText h1 {
+  font-size: 3em;
+  margin-top: 0;
 }
 
 #bannerContainer .content .secondaryBannerCont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 62em;
 }
 
 #bannerContainer .content .secondaryBannerCont .bannerSecondary {
   color: white;
   width: 10em;
-  border: solid black 1px;
-  margin: 0 0 0 2em;
+  margin: 0 0 0 2.5em;
 }
 
 .productsContainer {
@@ -206,6 +250,7 @@ header #headerContainer #headerCont #headerLang {
 .productsContainer .prodChonkCont .productChonk {
   width: 39em;
   margin: 0 0 2em 0;
+  position: relative;
 }
 
 .productsContainer .prodChonkCont .productChonk .chonkInfo {
@@ -231,6 +276,7 @@ header #headerContainer #headerCont #headerLang {
 .productsContainer .prodChonkCont .productSmol {
   width: 25.3em;
   margin: 0 0 2em 0;
+  position: relative;
 }
 
 .productsContainer .prodChonkCont .productSmol .chonkInfo {
@@ -240,7 +286,7 @@ header #headerContainer #headerCont #headerLang {
 }
 
 .productsContainer .prodChonkCont .productSmol .chonkInfo .infoRight {
-  width: 15em;
+  width: 14em;
   padding: 1em 1em 0 1em;
   position: relative;
 }
@@ -329,5 +375,329 @@ header #headerContainer #headerCont #headerLang {
   position: relative;
   top: -4em;
   left: 1em;
+}
+
+.graySection .grayBg .grayCont .grayRight .grayImg2 {
+  max-width: 120%;
+  max-height: 120%;
+  position: relative;
+  top: 0;
+  left: 1em;
+}
+
+.achievedProjectsContainer {
+  width: 100%;
+  margin-bottom: 5em;
+}
+
+.achievedProjectsContainer .achievedCont {
+  max-width: 80em;
+  margin: auto;
+}
+
+.achievedProjectsContainer .achievedCont .lineLeftRight {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.achievedProjectsContainer .achievedCont .lineLeftRight .lineRight span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic {
+  width: 18em;
+  margin: 0 0 1em 0;
+  position: relative;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic .aPicInfo {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic .aPicInfo .aPicInfoTop {
+  padding: 0.3em;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic .aPicInfo .aPicInfoBot {
+  color: white;
+  margin: 60% 0 0 6%;
+  font-size: 0.9em;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic .aPicInfo .aPicInfoBot h1 {
+  margin-top: 0.3em;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic .aPicInfo .aPicInfoBot p {
+  margin-bottom: 0;
+}
+
+.achievedProjectsContainer .achievedCont .achievedPics .aPic img {
+  width: 100%;
+}
+
+.aboutContainer {
+  width: 100%;
+}
+
+.aboutContainer .aboutContent {
+  max-width: 80em;
+  border-top: 2px solid black;
+  margin: auto;
+  padding-top: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aboutContainer .aboutLeft {
+  width: 40%;
+  padding: 0 10% 0 0;
+}
+
+.aboutContainer .aboutLeft h1 {
+  margin: 0 0 1em 0;
+  font-size: 2.2em;
+}
+
+.aboutContainer .aboutRight {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aboutContainer .aboutRight .infoHolder {
+  width: 50%;
+}
+
+.aboutContainer .aboutRight .dudeHolder {
+  width: 50%;
+  position: relative;
+}
+
+.aboutContainer .aboutRight .dudeHolder img {
+  position: absolute;
+  max-width: 100%;
+  bottom: -8em;
+}
+
+.aboutContainer .arrowButton {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.aboutContainer .arrowButton .offerLink {
+  text-decoration: none;
+  padding: 0.7em 1em 0.7em 0;
+}
+
+footer {
+  width: 100%;
+  margin-top: 8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerLeft {
+  width: 25%;
+  background-color: #1fbde4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerLeft .footerBtnHolder {
+  max-width: 19em;
+  text-align: center;
+}
+
+footer .footerLeft .footerBtnHolder .filledButtonCyan {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  background-color: #67c7d8;
+  cursor: pointer;
+  margin: 0 0 0.5em 0;
+  color: white;
+}
+
+footer .footerLeft .footerBtnHolder .filledButtonCyan .offerLink {
+  text-decoration: none;
+  width: 100%;
+  padding: 0.7em 1em 0.7em 1em;
+}
+
+footer .footerLeft .footerBtnHolder .filledButtonBlack {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  background-color: #363636;
+  cursor: pointer;
+  margin: 0.5em 0 0 0;
+  color: white;
+}
+
+footer .footerLeft .footerBtnHolder .filledButtonBlack img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+footer .footerLeft .footerBtnHolder .filledButtonBlack .offerLink {
+  text-decoration: none;
+  padding: 0.7em 1em 0.7em 1em;
+  width: 70%;
+}
+
+footer .footerRight {
+  width: 75%;
+  background-color: #363636;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4em 0 4em 0;
+}
+
+footer .footerRight .footerRightDiv {
+  width: 12em;
+  margin: 0.5em 3.5% 0.5em 2%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .footerRight .footerRightDiv .rightDivContent span {
+  font-size: 1.5em;
+}
+
+footer .footerRight .footerRightDiv .rightDivContent p {
+  margin-top: 0;
+}
+
+footer .footerRight .footerRightDiv .rightDivAddress {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerRight .footerRightDiv .rightDivAddress img {
+  height: 65%;
+  padding-top: 6px;
+  margin-right: 0.5em;
+}
+
+footer .footerRight .footerRightCert {
+  margin: 0.5em 2% 0.5em 2%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .footerRight .footerRightCert span {
+  font-size: 1.5em;
+}
+
+footer .footerRight .footerRightCert img {
+  margin-top: 1em;
+}
+
+footer .footerRight .footerRightContacts {
+  margin: 0.5em 2% 0.5em 2%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .footerRight .footerRightContacts .contactsIcon img {
+  margin: 0 1em 0 0;
+}
+
+footer .footerRight .footerRightContacts .created img {
+  margin: 0 0 0 0.5em;
+}
+
+footer .footerRight .footerRightButton {
+  margin: 0.5em 2% 0.5em 3.5%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 /*# sourceMappingURL=style.css.map */
