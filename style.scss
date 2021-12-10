@@ -1,0 +1,292 @@
+//----------------------- HEADER -----------------
+
+$test: solid black 1px;
+
+@font-face {
+    font-family: sans-medium;
+    src: url(../../src/OfficinaSansITCPro-Medium.ttf);
+}
+
+@font-face {
+    font-family: sans-book;
+    src: url(../../src/OfficinaSansITCPro-Book.ttf);
+}
+
+html, body {
+    margin: 0;
+    font-family: sans-book;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.grayText {
+    color: gray;
+    font-size: 1.1em;
+}
+
+.borderLeft {
+    position: absolute;
+    background-color: rgb(207, 207, 207);
+    height: 70%;
+    width: 1px;
+    left: 0;
+    top: 20%;
+}
+
+.hollowButton {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(61, 164, 233);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 2em;
+
+    .offerLink {
+        text-decoration: none;
+        padding: 1em;
+    }
+}
+
+.filledButton {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(61, 164, 233);
+    cursor: pointer;
+    margin-right: 2em;
+    color: white;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+
+    .offerLink {
+        text-decoration: none;
+        padding: 1em;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    height: 4em;
+    border: $test;
+    z-index: 100;
+    background-color: white;
+
+    #headerContainer {
+        height: 100%;
+        max-width: 80em;
+        margin: auto;
+
+        #headerLogo {
+            float: left;
+            height: inherit;
+
+            img {
+                height: inherit;
+            }
+        }  
+
+        #headerCont {
+            display: flex;
+            height: inherit;
+            float: right;
+            align-items: center;
+
+            #headerNav {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                width: fit-content;
+            }
+
+            #headerLang {
+                width: fit-content;
+            }
+        }
+    }
+}
+
+//------------------------- BANNER ----------------------
+
+#bannerContainer {
+    position: relative;
+    max-width: 100%;
+    margin: 4em 0 5em 0;
+    
+
+    img {
+        max-width: 100%;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 80em;
+        margin-top: 10%;
+        transform: translateX(-50%);
+
+        .bannerText {
+            border: $test;
+            height: fit-content;
+            width: 20em;
+            color: white;
+            float: left;
+        }
+
+        .secondaryBannerCont {
+            display: flex;
+            float: right;
+
+            .bannerSecondary {
+                color: white;
+                width: 10em;
+                border: $test;
+                margin: 0 0 0 2em;
+            }
+        }
+
+        
+    }
+}
+
+//--------------------- PRODUCT LIST -------------------------
+
+.productsContainer {
+    width: 100%;
+    margin-bottom: 5em;
+
+    .prodChonkCont {
+        max-width: 80em;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        margin: auto;
+        justify-content: space-between;
+
+        .productChonk {
+            width: 39em;
+            margin: 0 0 2em 0;
+
+            .chonkInfo {
+                display: flex;
+
+                .infoRight {
+                    width: 25%;
+                    padding: 1em 1em 0 1em;
+                    position: relative;
+                }
+            }
+
+            .chonkImg {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .productSmol {
+            width: 25.3em;
+            margin: 0 0 2em 0;
+
+            .chonkInfo {
+                display: flex;
+
+                .infoRight {
+                    width: 15em;
+                    padding: 1em 1em 0 1em;
+                    position: relative;
+                }
+            }
+
+            .smolImg {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//------------------- GRAY SECTION --------------------
+
+.graySection {
+    width: 100%;
+    margin: 0 0 5em 0;
+
+    .grayBg {
+        background-color: rgb(245, 245, 245);
+        max-width: 96em;
+        margin: auto;
+
+        .grayCont {
+            max-width: 80em;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: auto;
+
+            .grayLeft {
+                max-width: 50%;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+
+                .buttonHolder {
+                    display: flex;
+                    align-items: center;
+                    margin: 1em 0 0 0;
+
+                    .cameraButton {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-weight: bold;
+                            margin: 0 0 0 0.5em;
+                        }
+                    }
+                }
+            }
+
+            .grayRight {
+                max-width: 50%;
+
+                .grayImg1 {
+                    max-width:120%;
+                    max-height:120%;
+                    position: relative;
+                    top: -4em;
+                    left: 1em;
+                }
+            }
+        }
+    }
+}
+
+//------------------------- PROJECTS ----------------------
+
+
+
+
+
+
+

@@ -1,0 +1,338 @@
+@font-face {
+  font-family: sans-medium;
+  src: url(../../src/OfficinaSansITCPro-Medium.ttf);
+}
+
+@font-face {
+  font-family: sans-book;
+  src: url(../../src/OfficinaSansITCPro-Book.ttf);
+}
+
+html, body {
+  margin: 0;
+  font-family: sans-book;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.grayText {
+  color: gray;
+  font-size: 1.1em;
+}
+
+.borderLeft {
+  position: absolute;
+  background-color: #cfcfcf;
+  height: 70%;
+  width: 1px;
+  left: 0;
+  top: 20%;
+}
+
+.hollowButton {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #3da4e9;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+.hollowButton .offerLink {
+  text-decoration: none;
+  padding: 1em;
+}
+
+.filledButton {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #3da4e9;
+  cursor: pointer;
+  margin-right: 2em;
+  color: white;
+}
+
+.filledButton img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.filledButton .offerLink {
+  text-decoration: none;
+  padding: 1em;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  height: 4em;
+  border: solid black 1px;
+  z-index: 100;
+  background-color: white;
+}
+
+header #headerContainer {
+  height: 100%;
+  max-width: 80em;
+  margin: auto;
+}
+
+header #headerContainer #headerLogo {
+  float: left;
+  height: inherit;
+}
+
+header #headerContainer #headerLogo img {
+  height: inherit;
+}
+
+header #headerContainer #headerCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  float: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #headerContainer #headerCont #headerNav {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header #headerContainer #headerCont #headerLang {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#bannerContainer {
+  position: relative;
+  max-width: 100%;
+  margin: 4em 0 5em 0;
+}
+
+#bannerContainer img {
+  max-width: 100%;
+}
+
+#bannerContainer .content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80em;
+  margin-top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#bannerContainer .content .bannerText {
+  border: solid black 1px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 20em;
+  color: white;
+  float: left;
+}
+
+#bannerContainer .content .secondaryBannerCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+#bannerContainer .content .secondaryBannerCont .bannerSecondary {
+  color: white;
+  width: 10em;
+  border: solid black 1px;
+  margin: 0 0 0 2em;
+}
+
+.productsContainer {
+  width: 100%;
+  margin-bottom: 5em;
+}
+
+.productsContainer .prodChonkCont {
+  max-width: 80em;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.productsContainer .prodChonkCont .productChonk {
+  width: 39em;
+  margin: 0 0 2em 0;
+}
+
+.productsContainer .prodChonkCont .productChonk .chonkInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsContainer .prodChonkCont .productChonk .chonkInfo .infoRight {
+  width: 25%;
+  padding: 1em 1em 0 1em;
+  position: relative;
+}
+
+.productsContainer .prodChonkCont .productChonk .chonkImg {
+  width: 100%;
+}
+
+.productsContainer .prodChonkCont .productChonk .chonkImg img {
+  width: 100%;
+}
+
+.productsContainer .prodChonkCont .productSmol {
+  width: 25.3em;
+  margin: 0 0 2em 0;
+}
+
+.productsContainer .prodChonkCont .productSmol .chonkInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productsContainer .prodChonkCont .productSmol .chonkInfo .infoRight {
+  width: 15em;
+  padding: 1em 1em 0 1em;
+  position: relative;
+}
+
+.productsContainer .prodChonkCont .productSmol .smolImg {
+  width: 100%;
+}
+
+.productsContainer .prodChonkCont .productSmol .smolImg img {
+  width: 100%;
+}
+
+.graySection {
+  width: 100%;
+  margin: 0 0 5em 0;
+}
+
+.graySection .grayBg {
+  background-color: whitesmoke;
+  max-width: 96em;
+  margin: auto;
+}
+
+.graySection .grayBg .grayCont {
+  max-width: 80em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+.graySection .grayBg .grayCont .grayLeft {
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.graySection .grayBg .grayCont .grayLeft .buttonHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 0 0;
+}
+
+.graySection .grayBg .grayCont .grayLeft .buttonHolder .cameraButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graySection .grayBg .grayCont .grayLeft .buttonHolder .cameraButton a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 0 0 0.5em;
+}
+
+.graySection .grayBg .grayCont .grayRight {
+  max-width: 50%;
+}
+
+.graySection .grayBg .grayCont .grayRight .grayImg1 {
+  max-width: 120%;
+  max-height: 120%;
+  position: relative;
+  top: -4em;
+  left: 1em;
+}
+/*# sourceMappingURL=style.css.map */
