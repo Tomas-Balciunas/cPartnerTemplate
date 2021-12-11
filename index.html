@@ -18,20 +18,23 @@
             </div>
             <div id="headerCont">
                 <div id="headerNav">
-                    <nav>
-                        <a>Gaminiai</a>
-                        <a>Apie Mus</a>
-                        <a>Gamyba</a>
-                        <a>Nuoma</a>
-                        <a>Kontaktai</a>
-                    </nav>
+                    <a href="#">Gaminiai</a>
+                    <a href="#">Apie Mus</a>
+                    <a href="#">Gamyba</a>
+                    <a href="#">Nuoma</a>
+                    <a href="#">Kontaktai</a>
                 </div>
                 <div id="headerLang">
-                    <ul>
-                        <li>LT</li>
-                        <li>EN</li>
-                        <li>DK</li>
-                    </ul>
+                    <div class="selectHolder">
+                        <img alt="image" src="src/globe.webp">
+                        <div class="langListHolder">
+                            <span class="lang1">LT</span>
+                            <div class="langList hidden">
+                                <span class="lang2">EN</span>
+                                <span class="lang3">DK</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="hollowButton" onclick="location.href='';">
                     <img alt="image" src="src/offerIcon.webp">
@@ -44,35 +47,40 @@
     <div id="bannerContainer">
         <img alt="image" src="src/bg1.webp">
         <div class="content">
-            <div class="bannerText">
-                <h1>Modulinių namų statyba</h1>
-                <h2>nuo 2006 m.</h2>
+            <div class="bannerInnerHolder">
+                <div class="bannerText">
+                    <h1>Modulinių namų statyba</h1>
+                    <h2>nuo 2006 m.</h2>
+                </div>
+                <div class="secondaryBannerCont">
+                    <div class="bannerSecondary">
+                        <img alt="image" src="src/bannerSubIcon1.webp">
+                        <p>Greitas apčiuopiamo vaizdo rezultatas, bet kuriuo metų laiku – tiesiai iš mūsų gamyklos</p>
+                    </div>
+                    <div class="bannerSecondary">
+                        <img alt="image" src="src/bannerSubIcon2.webp">
+                        <p>Kiekvienam klientui sąmatos sudaromos individualiai, pagal jo norus ir pageidavimus</p>
+                    </div>
+                    <div class="bannerSecondary">
+                        <img alt="image" src="src/bannerSubIcon3.webp">
+                        <p>Įgyjome pakankamai patirties, kad galėtume pasiūlyti aukštą kokybę atitinkantį produktą</p>
+                    </div>
+                    <div class="bannerSecondary">
+                        <img alt="image" src="src/bannerVideoIcon.webp">
+                        <p>Žiūrėti video pristatymą</p>
+                    </div>
+                </div>
             </div>
-            <div class="secondaryBannerCont">
-                <div class="bannerSecondary">
-                    <img alt="image" src="src/bannerSubIcon1.webp">
-                    <p>Greitas apčiuopiamo vaizdo rezultatas, bet kuriuo metų laiku – tiesiai iš mūsų gamyklos</p>
-                </div>
-                <div class="bannerSecondary">
-                    <img alt="image" src="src/bannerSubIcon2.webp">
-                    <p>Kiekvienam klientui sąmatos sudaromos individualiai, pagal jo norus ir pageidavimus</p>
-                </div>
-                <div class="bannerSecondary">
-                    <img alt="image" src="src/bannerSubIcon3.webp">
-                    <p>Įgyjome pakankamai patirties, kad galėtume pasiūlyti aukštą kokybę atitinkantį produktą</p>
-                </div>
-                <div class="bannerSecondary">
-                    <img alt="image" src="src/bannerVideoIcon.webp">
-                    <p>Žiūrėti video pristatymą</p>
-                </div>
-            </div>
+
 
         </div>
     </div>
 
     <div class="productsContainer">
-        <div class="prodChonkCont">
-            <h1>Moduliniai gaminiai</h1>
+        <div class="widthContHolder">
+            <div class="maxWidthCont">
+                <h1>Moduliniai gaminiai</h1>
+            </div>
         </div>
         <div class="prodChonkCont">
             <div class="productChonk">
@@ -232,11 +240,17 @@
                     <h1>Įgyvendinti projektai</h1>
                 </div>
                 <div class="lineRight">
-                    <span>Rodomi:</span>
-                    <input type="checkbox" id="viewModular">
+                    <div class="rodomi">
+                        <span>Rodomi:</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="viewModular">
                     <label for="viewModular">Moduliniai projektai</label>
-                    <input type="checkbox" id="viewIndividual">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="viewIndividual">
                     <label for="viewIndividual">Individualūs projektai</label>
+                    </div>
                 </div>
             </div>
             <div class="achievedPics">
@@ -376,8 +390,10 @@
     </div>
 
     <div class="productsContainer">
-        <div class="prodChonkCont">
-            <h1>Turime sandelyje</h1>
+        <div class="widthContHolder">
+            <div class="maxWidthCont">
+                <h1>Turime sandelyje</h1>
+            </div>
         </div>
         <div class="prodChonkCont">
             <div class="productSmol">
@@ -450,15 +466,18 @@
                 </div>
             </div>
         </div>
-        <div class="prodChonkCont">
-            <div class="hollowButton" onclick="location.href='';">
-                <span class="offerLink">Visi Projektai</span>
-                <img alt="image" src="src/arrow.webp" style="margin-right: 0.8em;">
+        <div class="widthContHolder">
+            <div class="maxWidthCont">
+                <div class="hollowButton" onclick="location.href='';">
+                    <span class="offerLink">Visi Projektai</span>
+                    <img alt="image" src="src/arrow.webp" style="margin-right: 0.8em;">
+                </div>
             </div>
         </div>
     </div>
 
     <div class="aboutContainer">
+        <div class="aboutBorder"></div>
         <div class="aboutContent">
             <div class="aboutLeft">
                 <h1>Apie mus</h1>
@@ -469,9 +488,9 @@
                     specialistai. Mes padėsime Jums realizuoti savo idėjas, pasidalinsime savo žiniomis ir sukaupta
                     patirtimi norėdami padėti rasti Jums optimaliausią, Jūsų norus atitinkantį variantą.
                 </p>
-                <div class="arrowButton" onclick="location.href='';">
+                <div class="arrowButton aboutArrow1" onclick="location.href='';">
                     <span class="offerLink">Plačiau apie mus</span>
-                    <img alt="image" src="src/arrow.webp" style="margin-right: 0.8em;">
+                    <img alt="image" class="hoverArrow1" src="src/arrow.webp" style="margin-right: 0.8em;">
                 </div>
             </div>
             <div class="aboutRight">
@@ -482,15 +501,14 @@
                         gyvenimo ilgais pasiruošimo ir statybos procesais norint pasirūpinti nuosavu gyvenamuoju namu,
                         administracinėmis ar komercinėmis patalpomis – jie renkasi modulius.
                     </p>
-                    <div class="arrowButton" onclick="location.href='';">
+                    <div class="arrowButton aboutArrow2" onclick="location.href='';">
                         <span class="offerLink">Plačiau apie mus</span>
-                        <img alt="image" src="src/arrow.webp" style="margin-right: 0.8em;">
+                        <img alt="image" class="hoverArrow2" src="src/arrow.webp" style="margin-right: 0.8em;">
                     </div>
                 </div>
                 <div class="dudeHolder">
                     <img alt="image" src="src/dude.webp">
                 </div>
-
             </div>
         </div>
     </div>
@@ -512,7 +530,9 @@
                 <div class="footerRightDiv">
                     <div class="rightDivContent">
                         <span>+370 650 70474</span>
-                        <p>info@balticmodules.lt</p>
+                        <a href="#">
+                            <p>info@balticmodules.lt</p>
+                        </a>
                     </div>
                     <div class="rightDivAddress">
                         <img alt="image" src="src/pointer.webp">
@@ -522,24 +542,24 @@
                 <div class="footerRightCert">
                     <span>Kokybės serfifikatai</span>
                     <div class="certificates">
-                        <img alt="image" src="src/cert1.webp">
-                        <img alt="image" src="src/cert2.webp">
-                        <img alt="image" src="src/cert3.webp">
+                        <a href="#"><img alt="image" class="cert1" src="src/cert1.webp"></a>
+                        <a href="#"><img alt="image" class="cert2" src="src/cert2.webp"></a>
+                        <a href="#"><img alt="image" class="cert3" src="src/cert3.webp"></a>
                     </div>
                 </div>
                 <div class="footerRightContacts">
                     <div class="contactsIcon">
-                        <img alt="image" src="src/fb.webp">
-                        <img alt="image" src="src/yt.webp">
+                        <a href="#"><img alt="image" src="src/fb.webp"></a>
+                        <a href="#"><img alt="image" src="src/yt.webp"></a>
                     </div>
                     <p>© 2019 UAB „Baltic Modules“</p>
                     <div class="created">
                         <span>Sukūrė</span>
-                        <img alt="image" src="src/cp.webp">
+                        <a href="https://www.cpartner.lt/"><img alt="image" src="src/cp.webp"></a>
                     </div>
                 </div>
                 <div class="footerRightButton">
-                    <div class="filledButton" onclick="location.href='';">
+                    <div class="askUs" onclick="location.href='';">
                         <img alt="image" src="src/offerIcon.webp">
                         <span class="offerLink">Klauskite mūsų</span>
                     </div>
@@ -549,7 +569,7 @@
     </div>
 
 
-    <script src="" async defer></script>
+    <script src="script.js" async defer></script>
 </body>
 
 </html>
