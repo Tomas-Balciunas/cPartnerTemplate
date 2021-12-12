@@ -11,6 +11,7 @@ $test: solid black 1px;
 html, body {
     margin: 0;
     font-family: sans-book;
+    overflow-x: hidden;
 }
 
 .price {
@@ -150,7 +151,7 @@ header {
             margin: 0 0 0 2em;
 
             img {
-                height: 100%;
+                height: auto;
             }
 
             .headerMenuBtn {
@@ -161,6 +162,7 @@ header {
                 display: none;
                 img {
                     height: 2em;
+                    width: 2em;
                 }
             }
         }  
@@ -283,6 +285,7 @@ header {
 
     img {
         max-width: 100%;
+        height: auto;
     }
 
     .content {
@@ -373,6 +376,7 @@ header {
 
                 img {
                     width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -405,9 +409,11 @@ header {
 
             .smolImg {
                 width: 100%;
+                
 
                 img {
                     width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -471,6 +477,7 @@ header {
                 .grayImg1 {
                     max-width:120%;
                     max-height:120%;
+                    height: auto;
                     position: relative;
                     top: -4em;
                     left: 1em;
@@ -479,6 +486,7 @@ header {
                 .grayImg2 {
                     max-width:120%;
                     max-height:120%;
+                    height: auto;
                     position: relative;
                     top: 0;
                     left: 1em;
@@ -826,7 +834,16 @@ footer {
     }
 }
 
+//--------------------------------- MEDIA QUERIES ------------------------------------------
+
 @media (max-width: 1280px) {
+    .aboutContainer {
+        .aboutBorder {
+            max-width: 80em;
+            width: 100%;
+        }
+    }
+    
     .achievedProjectsContainer {
         .achievedCont {
             .lineLeftRight {
