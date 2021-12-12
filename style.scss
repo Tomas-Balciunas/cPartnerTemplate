@@ -48,8 +48,6 @@ html, body {
 }
 
 .hollowButton {
-    height: fit-content;
-    width: fit-content;
     display: flex;
     align-items: center;
     border: 2px solid rgb(31, 189, 228);
@@ -73,8 +71,6 @@ html, body {
 }
 
 .filledButton {
-    height: fit-content;
-    width: fit-content;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -109,7 +105,6 @@ html, body {
     .aPicInfoTop {
         padding: 0.3em;
         background-color: white;
-        width: fit-content;
     }
     .aPicInfoBot {
         color: white;
@@ -670,7 +665,6 @@ footer {
             text-align: center;
 
             .filledButtonCyan {
-                height: fit-content;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -688,7 +682,6 @@ footer {
             }
 
             .filledButtonBlack {
-                    height: fit-content;
                     width: 100%;
                     display: flex;
                     align-items: center;
@@ -804,8 +797,6 @@ footer {
             transform: translateY(100%);
 
             .askUs {
-                height: fit-content;
-                width: fit-content;
                 display: flex;
                 align-items: center;
                 border-radius: 5px;
