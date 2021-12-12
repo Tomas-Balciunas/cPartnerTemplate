@@ -2,8 +2,22 @@ let langBtn = document.querySelector('#headerLang');
 let lang1 = document.querySelector('.lang1');
 let lang2 = document.querySelector('.lang2');
 let lang3 = document.querySelector('.lang3');
+let menuBtn = document.querySelector('.headerMenuBtn');
+let menuContent = document.querySelector('.headerCont');
+const mediaQuery = window.matchMedia('(min-width: 1161px)')
+if (mediaQuery.matches) {
+    menuContent.style.display = 'flex';
+}
 
-
+menuBtn.addEventListener('click', function () {
+    if (menuContent.classList.contains('active')) {
+        menuContent.style.display = 'none';
+        menuContent.classList.remove('active');
+    } else {
+        menuContent.style.display = 'block';
+        menuContent.classList.add('active');
+    }
+})
 
 langBtn.addEventListener('click', function () {
     if (langBtn.classList.contains('active')) {

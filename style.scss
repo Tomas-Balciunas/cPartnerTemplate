@@ -135,7 +135,6 @@ header {
     height: 6em;
     z-index: 9999;
     background-color: white;
-    
 
     #headerContainer {
         height: 100%;
@@ -144,17 +143,29 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         #headerLogo {
             height: 70%;
-            margin: 0 0 0 1em;
+            margin: 0 0 0 2em;
 
             img {
                 height: 100%;
             }
+
+            .headerMenuBtn {
+                position: absolute;
+                top: 1em;
+                left: 90%;
+                cursor: pointer;
+                display: none;
+                img {
+                    height: 2em;
+                }
+            }
         }  
 
-        #headerCont {
+        .headerCont {
             display: flex;
             height: inherit;
             align-items: center;
@@ -844,6 +855,98 @@ footer {
 }
 
 @media (max-width: 1160px) {
+    header {
+        height: fit-content;
+
+        #headerContainer {
+            height: 100%;
+            justify-content: center;
+            flex-direction: column;
+
+            #headerLogo {
+                height: 4em;
+                margin: 0;
+                display: flex;
+                align-items: center;
+
+                img {
+                    max-height: 80%;
+                }
+
+                .headerMenuBtn {
+                    display: block;
+                }
+            }  
+
+            .headerCont {
+                flex-direction: column;
+                margin: 2% 0 2% 0;
+                width: 100%;
+                display: none;
+
+                #headerNav {
+                    width: 100%;
+                    justify-content: center;
+                    
+                    a {
+                        margin: 0 2% 0 2%;
+                        font-weight: normal;
+                        font-size: 1em;
+                    }
+
+                    a:hover {
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+
+                #headerLang {
+                    margin: 2% auto 2% auto;
+                }
+
+                .hollowButton {
+                    margin: auto;
+                }
+            }
+        }
+    }
+    
+    #bannerContainer {
+        margin: 4em 0 0 0;
+        .content {
+            margin-top: 4%;
+    
+            .bannerInnerHolder {
+                flex-direction: column;
+                align-items: center;
+    
+                .bannerText {
+                    max-width: 100%;
+                    margin: 0;
+                    text-align: center;
+    
+                    h1 {
+                        font-size: 1.8em;
+                        margin-top: 0;
+                    }
+
+                    h2 {
+                        font-size: 1.3em;
+                    }
+                }
+    
+                .secondaryBannerCont {
+                    .bannerSecondary {
+                        padding: 0.5em;
+                        margin: 0 0 0 2em;
+                    }
+                }
+    
+            }
+        }
+    }
+
     .widthContHolder {
         .maxWidthCont {
             justify-content: center;
@@ -865,6 +968,17 @@ footer {
 }
 
 @media (max-width: 875px) {
+    #bannerContainer {
+        .content {
+            .bannerInnerHolder {
+                .secondaryBannerCont {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+
     .graySection {
         .grayBg {
             .grayCont {
@@ -892,6 +1006,132 @@ footer {
         .prodChonkCont {
             .productSmol {
                 max-width: 35em;
+            }
+        }
+    }
+
+    .aboutContainer {
+        .aboutContent {
+            .aboutRight {
+                .infoHolder {
+                    width: 100%;
+                }
+                .dudeHolder {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+
+        .footerLeft {
+            width: 100%;
+            .footerBtnHolder {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .filledButtonCyan {
+                    margin: 1em 0.5em 1em 0;
+                    width: 14em;
+                }
+
+                .filledButtonBlack {
+                    margin: 1em 0 1em 0.5em;
+                    width: 14em;
+                }
+            }
+        }
+
+        .footerRight {
+            width: 100%;
+            margin: 0;
+            justify-content: space-evenly;
+
+            .footerRightCert {
+                text-align: center;
+
+                .certificates {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .price {
+        font-size: 1.3em;
+    }
+
+    .borderLeft {
+        height: 85%;
+    }
+
+    .productsContainer {
+        .infoLeft {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+
+        .prodChonkCont {
+            .productSmol, .productChonk {
+                .chonkInfo {
+                    .infoRight {
+                        width: 8em;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutContainer {
+        .aboutContent {
+            flex-direction: column;
+            align-items: center;
+
+            .aboutLeft {
+                width: 95%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .aboutRight {
+                width: 95%;
+                margin: 0;
+            }
+        }
+    }
+
+    footer {
+        .footerLeft {
+            .footerBtnHolder {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .filledButtonCyan {
+                    margin: 0.5em 0 0.25em 0;
+                    width: 14em;
+                }
+
+                .filledButtonBlack {
+                    margin: 0.25em 0 0.5em 0;
+                    width: 14em;
+                }
             }
         }
     }
