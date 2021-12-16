@@ -3,6 +3,12 @@
 $test: solid black 1px;
 
 @font-face {
+    font-family: sans-medium;
+    src: url(../../src/OfficinaSansITCPro-Medium.ttf);
+    font-display: swap
+}
+
+@font-face {
     font-family: sans-book;
     src: url(../../src/OfficinaSansITCPro-Book.ttf);
     font-display: swap
@@ -10,18 +16,20 @@ $test: solid black 1px;
 
 html, body {
     margin: 0;
-    font-family: sans-book;
     overflow-x: hidden;
 }
 
 .price {
-    font-weight: bold;
-    font-size: 1.8em;
+    font-size: 30px;
+
 }
 
 .grayText {
     color: gray;
-    font-size: 1.1em;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    font-family: sans-book;
 }
 
 .borderLeft {
@@ -36,6 +44,7 @@ html, body {
 .widthContHolder {
     max-width: 82em;
     margin: auto;
+    font-family: sans-medium;
 
     .maxWidthCont {
         max-width: 80em;
@@ -44,6 +53,12 @@ html, body {
         display: flex;
         justify-self: left;
         justify-content: space-between;
+
+        h1 {
+            font-size: 60px;
+            letter-spacing: -0.02em;
+            font-weight: 400;
+        }
     }
 }
 
@@ -51,13 +66,17 @@ html, body {
     width: fit-content;
     display: flex;
     align-items: center;
-    border: 2px solid rgb(31, 189, 228);
-    border-radius: 5px;
+    border: 2px solid #00A6CC;
+    border-radius: 4px;
     cursor: pointer;
+    font-family: sans-medium;
 
     .offerLink {
         text-decoration: none;
-        padding: 0.7em 1em 0.7em 1em;
+        padding: 0.5em 1em 0.5em 0.7em;
+        font-size: 20px;
+        line-height: 150%;
+        margin: 0;
     }
 
     &:hover {
@@ -75,10 +94,11 @@ html, body {
     width: fit-content;
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    background-color: rgb(31, 189, 228);
+    border-radius: 4px;
+    background-color: #00A6CC;
     cursor: pointer;
     color: white;
+    font-family: sans-medium;
 
     img {
         filter: brightness(0) invert(1);
@@ -86,7 +106,10 @@ html, body {
 
     .offerLink {
         text-decoration: none;
-        padding: 0.7em 1em 0.7em 1em;
+        padding: 0.7em 1.3em 0.7em 0.7em;
+        font-size: 20px;
+        line-height: 150%;
+        margin: 0;
     }
 
     &:hover {
@@ -103,6 +126,7 @@ html, body {
     z-index: 999;
     top: 1em;
     left: 1em;
+    font-family: sans-book;
 
     .aPicInfoTop {
         width: fit-content;
@@ -134,6 +158,7 @@ header {
     height: 6em;
     z-index: 9999;
     background-color: white;
+    font-family: sans-medium;
 
     #headerContainer {
         height: 100%;
@@ -145,11 +170,12 @@ header {
         position: relative;
 
         #headerLogo {
-            height: 70%;
+            height: 65%;
             margin: 0 0 0 2em;
 
             img {
-                height: auto;
+                height: 100%;
+                width: auto;
             }
 
             .headerMenuBtn {
@@ -187,17 +213,16 @@ header {
                     white-space: nowrap;
                     text-decoration: none;
                     color: black;
-                    font-weight: bold;
-                    font-size: 1.1em;
+                    font-size: 20px;
                     position: relative;
                 }
 
                 a:hover {
-                    color: rgb(31, 189, 228);
+                    color: #00A6CC;
                     &:before {
                         content:"";
                         position:absolute;
-                        background-color:rgb(31, 189, 228);
+                        background-color:#00A6CC;
                         width:100%;
                         height:2px;
                         left:0;
@@ -206,66 +231,61 @@ header {
                 }
             }
 
-            #headerLang {
-                width: 4em;
+            .langListHolder {
+                display: flex;
+                align-items: center;
+                text-align: right;
+                position: relative;
+                width: 5em;
                 margin: 0 6% 0 6%;
-                font-weight: bold;
+                height: 3em;
 
-                .selectHolder {
+                .langList {
+                    width: 3em;
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     padding: 0.5em;
-                    margin-right: -0.5em;
-                    border-radius: 3px;
-                    text-align: right;
+                    background-color: #FFFFFF;
+                    border-radius: 4px;
+                    font-size: 20px;
 
                     &:hover {
-                        box-shadow: 0 2px 13px -2px rgb(41, 41, 41);
-                        transition: 0.2s;
+                        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.25);
                         cursor: pointer;
                     }
 
-                    .langListHolder {
-                        position: relative;
+                    .lang1 {
+                        background-image: url('../../src/globe.svg');
+                        background-repeat: no-repeat;
+                        background-position: left;
                         width: 100%;
+                        display: block;
+                    }
 
-                        .langList {
-                            position: absolute;
-                            top: 130%;
-                            right: 0;
-                            width: 4em;
-                            display: flex;
-                            flex-direction: column;
+                    .lang2 {
+                        background-color: #FFFFFF;
+                        border-top: 1px solid rgb(228, 228, 228);
+                        border-bottom: 1px solid rgb(228, 228, 228);
+                        margin: 0.5em -0.5em 0.5em -0.5em;
+                        padding: 0.4em 0.5em 0.4em 0.5em;
+                        display: none;
 
-                            .lang2 {
-                                display: none;
-                                background-color: white;
-                                padding: 0.5em 0.5em 0.5em 0;
-                                margin-right: -0.5em;
-                                border-top: 1px solid rgb(228, 228, 228);
-                                border-bottom: 1px solid rgb(228, 228, 228);
-                                &:hover {
-                                    color: rgb(31, 189, 228);
-                                }
-                            }
-
-                            .lang3 {
-                                display: none;
-                                background-color: white;
-                                padding: 0.5em 0.5em 0.5em 0;
-                                margin-right: -0.5em;
-                                border-bottom-left-radius: 3px;
-                                border-bottom-right-radius: 3px;
-                                &:hover {
-                                    color: rgb(31, 189, 228);
-                                }
-                            }
+                        &:hover {
+                            color: #00A6CC;
                         }
                     }
-                }
 
-                img {
-                    margin-right: 0.5em;
+                    .lang3 {
+                        background-color: #FFFFFF;
+                        display: none;
+
+                        &:hover {
+                            color: #00A6CC;
+                        }
+                    }
                 }
             }
         }
@@ -292,7 +312,7 @@ header {
         top: 0;
         max-width: 82em;
         width: 100%;
-        margin-top: 8%;
+        margin-top: 6%;
 
         .bannerInnerHolder {
             display: flex;
@@ -302,13 +322,23 @@ header {
 
             .bannerText {
                 height: fit-content;
-                max-width: 18em;
+                max-width: 21em;
                 color: white;
                 margin: 0 0 0 1em;
+                font-family: sans-medium;
 
                 h1 {
-                    font-size: 3em;
-                    margin-top: 0;
+                    font-size: 60px;
+                    margin: 0 0 0.3em 0;
+                    letter-spacing: -0.02em;
+                    line-height: 66px;
+                    font-weight: 400;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    margin: 0;
+                    font-weight: 400;
                 }
             }
 
@@ -317,6 +347,9 @@ header {
                 justify-content: flex-end;
                 max-width: 62em;
                 margin: 0 1em 0 0;
+                font-family: sans-book;
+                font-size: 18px;
+                line-height: 150%;
 
                 .bannerSecondary {
                     color: white;
@@ -333,7 +366,7 @@ header {
 
 .productsContainer {
     width: 100%;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 
     .prodChonkCont {
         max-width: 82em;
@@ -350,8 +383,8 @@ header {
             padding: 1em;
 
             &:hover {
-                box-shadow: 0 2px 13px -2px rgb(41, 41, 41);
-                transition: 0.2s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
                 cursor: pointer;
             }
 
@@ -360,12 +393,17 @@ header {
 
                 .infoLeft {
                     margin: 0 0.5em 0 0;
+
+                    h1 {
+                        font: 30px sans-medium;
+                    }
                 }
 
                 .infoRight {
                     width: 12em;
                     padding: 1em 1em 0 1em;
                     position: relative;
+                    font-family: sans-medium;
                 }
             }
 
@@ -381,13 +419,13 @@ header {
 
         .productSmol {
             max-width: 25.3em;
-            margin: 0 0 2em 0;
+            margin: 0 0 1em 0;
             position: relative;
             padding: 1em;
 
             &:hover {
-                box-shadow: 0 7px 13px -2px rgb(41, 41, 41);
-                transition: 0.2s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
                 cursor: pointer;
             }
 
@@ -396,12 +434,17 @@ header {
 
                 .infoLeft {
                     margin: 0 0.5em 0 0;
+
+                    h1 {
+                        font: 30px sans-medium;
+                    }
                 }
 
                 .infoRight {
                     width: 14em;
                     padding: 1em 1em 0 1em;
                     position: relative;
+                    font-family: sans-medium;
                 }
             }
 
@@ -431,6 +474,7 @@ header {
 
         .grayCont {
             max-width: 82em;
+            max-height: 50em;
             display: flex;
             flex-flow: row;
             justify-content: space-between;
@@ -438,29 +482,36 @@ header {
 
             .grayLeft {
                 margin: 0 0 0 1em;
+                padding: 3em 0 1.5em 0;
                 max-width: 49%;
                 display: flex;
                 flex-flow: column;
-                justify-content: center;
+                justify-content: flex-start;
+
+                h1 {
+                    font: 60px sans-medium;
+                    font-weight: 400;
+                }
 
                 .buttonHolder {
                     display: flex;
                     align-items: center;
-                    margin: 1em 0 0 0;
+                    margin: 1.5em 0 1em 0;
 
                     .cameraButton {
                         display: flex;
                         align-items: center;
                         margin: 0 0 0 2em;
+                        font-family: sans-book;
 
                         a {
                             text-decoration: none;
                             color: black;
-                            font-weight: bold;
                             margin: 0 0 0 0.5em;
+                            font-size: 20px;
 
                             &:hover {
-                                color: rgb(31, 189, 228);
+                                color: #00A6CC;
                                 cursor: pointer;
                             }
                         }
@@ -498,7 +549,7 @@ header {
 
 .achievedProjectsContainer {
     width: 100%;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
 
     .achievedCont {
         max-width: 82em;
@@ -511,12 +562,28 @@ header {
             justify-content: space-between;
             margin: 0 1em 0 1em;
 
+            h1 {
+                font: 60px sans-medium;
+                font-weight: 400;
+            }
+
             .lineRight {
                 display: flex;
                 align-items: center;
+                font-family: sans-book;
+                position: relative;
+
+                .container {
+                    margin: 0 0.8em 0 0.8em;
+                }
+
                 span {
                     font-weight: bold;
-                    font-size: 1.1em;
+                    font-size: 20px;
+                }
+
+                label {
+                    font-size: 18px;
                 }
             }
         }
@@ -526,6 +593,7 @@ header {
             width: 100%;
             flex-flow: row wrap;
             justify-content: space-between;
+            margin: 0 0 2em 0;
 
             .aPic {
                 width: 18em;
@@ -538,8 +606,8 @@ header {
                 }
 
                 &:hover {
-                    box-shadow: 0 2px 13px -2px rgb(41, 41, 41);
-                    transition: 0.2s;
+                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.25);
+                    border-radius: 4px;
                     cursor: pointer;
                 }
 
@@ -560,14 +628,15 @@ header {
                     .aPicInfoBot {
                         color: white;
                         margin: 55% 0 0 6%;
-                        font-size: 0.9em;
 
                         h1 {
                             margin-top: 0.3em;
+                            font-size: 30px;
                         }
 
                         p {
                             margin-bottom: 0;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -584,6 +653,13 @@ header {
 
 .aboutContainer {
     width: 100%;
+    margin: 6em 0 0 0;
+
+    h1 {
+        margin: 0 0 1em 0;
+        font: 48px sans-medium;
+        font-weight: 400;
+    }
 
     .aboutBorder {
         width: 80em;
@@ -602,11 +678,6 @@ header {
         width: 40%;
         margin: 0 0 0 1em;
         padding: 0 10% 0 0;
-
-        h1 {
-            margin: 0 0 1em 0;
-            font-size: 2.2em;
-        }
     }
 
     .aboutRight {
@@ -636,15 +707,16 @@ header {
         display: flex;
         align-items: center;
         cursor: pointer;
-        font-weight: bold;
 
         &:hover {
-            color: rgb(31, 189, 228);
+            color: #00A6CC;
         }
 
         .offerLink {
+            font-family: sans-medium;
             text-decoration: none;
             padding: 0.7em 1em 0.7em 0;
+            font-size: 20px;
         }
     }
 }
@@ -657,41 +729,51 @@ footer {
     display: flex;
 
     .footerLeft {
-        width: 25%;
-        background-color: rgb(31, 189, 228);
+        width: 35%;
+        background-color: #00A6CC;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: flex-start;
 
         .footerBtnHolder {
-            max-width: 19em;
+            position: absolute;
+            max-width: 82em;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
 
             .filledButtonCyan {
-                width: 100%;
+                width: 16em;
                 display: flex;
                 align-items: center;
-                border-radius: 4px;
-                background-color: rgb(103, 199, 216);
                 cursor: pointer;
-                margin: 0 0 0.5em 0;
+                margin: 0 1em 0.5em 1em;
                 color: white;
         
                 .offerLink {
+                    font-family: sans-book;
                     text-decoration: none;
+                    outline: none;
+                    border: none;
                     width: 100%;
-                    padding: 0.7em 1em 0.7em 1em;
+                    border-radius: 4px;
+                    padding: 0.8em 1em 0.8em 1em;
+                    font-size: 18px;
+                    background-color: rgb(103, 199, 216);
+                    color: white;
                 }
             }
 
             .filledButtonBlack {
-                    width: 100%;
+                    font-family: sans-medium;
+                    width: 16em;
                     display: flex;
                     align-items: center;
                     border-radius: 4px;
                     background-color: rgb(54, 54, 54);
                     cursor: pointer;
-                    margin: 0.5em 0 0 0;
+                    margin: 0.5em 1em 0 1em;
                     color: white;
             
                 img {
@@ -700,12 +782,13 @@ footer {
             
                 .offerLink {
                     text-decoration: none;
-                    padding: 0.7em 1em 0.7em 1em;
+                    padding: 0.8em 1em 0.8em 1em;
                     width: 70%;
+                    font-size: 20px;
                 }
 
                 &:hover {
-                    color: rgb(31, 189, 228);
+                    color: #00A6CC;
                     img {
                         filter: none;
                     }
@@ -715,21 +798,21 @@ footer {
     }
 
     .footerRight {
-        width: 75%;
+        width: 65%;
         background-color: rgb(54, 54, 54);
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        padding: 4em 0 4em 0;
+        padding: 4em 2em 4em 3em;
 
         .footerRightDiv {
             width: 12em;
-            margin: 0.5em 3.5% 0.5em 2%;
+            margin: 0.5em 2% 0.5em 2%;
             height: fit-content;
 
             .rightDivContent {
                 span {
-                    font-size: 1.5em;
+                    font: 20px sans-medium;
                 }
 
                 a {
@@ -739,6 +822,7 @@ footer {
                 p {
                     margin-top: 0;
                     color: gray;
+                    font: 18px sans-book;
 
                     &:hover {
                         color: white;
@@ -751,9 +835,13 @@ footer {
                 width: 100%;
                 display: flex;
 
+                span {
+                    font: 14px sans-book;
+                }
+
                 img {
                     height: 65%;
-                    padding-top: 6px;
+                    padding-top: 2px;
                     margin-right: 0.5em;
                 }
             }
@@ -764,7 +852,7 @@ footer {
             height: fit-content;
 
             span {
-                font-size: 1.5em;
+                font: 20px sans-medium;
             }
             img {
                 margin: 1em 0.5em 0 0;
@@ -774,6 +862,7 @@ footer {
         .footerRightContacts {
             margin: 0.5em 2% 0.5em 2%;
             height: fit-content;
+            font: 14px sans-book;
 
             .contactsIcon {
                 img {
@@ -803,7 +892,7 @@ footer {
                 display: flex;
                 align-items: center;
                 border-radius: 5px;
-                background-color: rgb(31, 189, 228);
+                background-color: #00A6CC;
                 cursor: pointer;
                 color: white;
 
@@ -843,7 +932,7 @@ footer {
             .lineLeftRight {
                 flex-direction: column;
                 align-items: center;
-                margin: 0 0 2em 0;
+                margin: 0 1em 2em 1em;
     
                 .lineRight {
                     display: flex;
@@ -894,6 +983,7 @@ footer {
                 margin: 2% 0 2% 0;
                 width: 100%;
                 display: none;
+                align-items: center;
 
                 #headerNav {
                     width: 100%;
@@ -912,8 +1002,8 @@ footer {
                     }
                 }
 
-                #headerLang {
-                    margin: 2% auto 2% auto;
+                .langListHolder {
+                    margin: 1em auto 1em auto;
                 }
 
                 .hollowButton {
@@ -975,7 +1065,12 @@ footer {
             }
         }
     }
-    
+
+    footer {
+        .footerRight {
+            padding: 4em 0em 4em 1em;
+        }
+    }
 }
 
 @media (max-width: 875px) {
@@ -1039,7 +1134,11 @@ footer {
 
         .footerLeft {
             width: 100%;
+
             .footerBtnHolder {
+                position: static;
+                transform: none;
+                padding: 0;
                 max-width: 100%;
                 width: 100%;
                 display: flex;
@@ -1048,12 +1147,12 @@ footer {
 
                 .filledButtonCyan {
                     margin: 1em 0.5em 1em 0;
-                    width: 14em;
+                    width: 16em;
                 }
 
                 .filledButtonBlack {
                     margin: 1em 0 1em 0.5em;
-                    width: 14em;
+                    width: 16em;
                 }
             }
         }
@@ -1077,11 +1176,22 @@ footer {
 }
 
 @media (max-width: 520px) {
-    #headerLogo {
-        img {
-            width: 60%;
-        }
+    h1 {
+        font-size: 30px;
     }
+
+    header {
+        #headerContainer {
+            #headerLogo {
+                img {
+                    width: 65%;
+                    height: auto;
+                }
+            }
+        }
+        
+    }
+    
     .price {
         font-size: 1.3em;
     }
@@ -1107,6 +1217,17 @@ footer {
                         width: 8em;
                     }
                 }
+            }
+        }
+    }
+
+    .graySection > .grayBg > .grayCont > .grayLeft {
+        .buttonHolder {
+            flex-direction: column;
+            align-items: center;
+
+            .cameraButton {
+                margin: 1em 0 0 0;
             }
         }
     }
@@ -1141,12 +1262,12 @@ footer {
 
                 .filledButtonCyan {
                     margin: 0.5em 0 0.25em 0;
-                    width: 14em;
+                    width: 16em;
                 }
 
                 .filledButtonBlack {
                     margin: 0.25em 0 0.5em 0;
-                    width: 14em;
+                    width: 16em;
                 }
             }
         }

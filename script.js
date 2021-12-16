@@ -1,4 +1,4 @@
-let langBtn = document.querySelector('#headerLang');
+let langBtn = document.querySelector('.langListHolder');
 let lang1 = document.querySelector('.lang1');
 let lang2 = document.querySelector('.lang2');
 let lang3 = document.querySelector('.lang3');
