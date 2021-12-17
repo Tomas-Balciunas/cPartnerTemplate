@@ -573,8 +573,13 @@ header {
                 font-family: sans-book;
                 position: relative;
 
+                div {
+                    display: flex;
+                    align-items: center;
+                }
+
                 .container {
-                    margin: 0 0.8em 0 0.8em;
+                    margin: 0 1.2em 0 1.2em;
                 }
 
                 span {
@@ -584,6 +589,25 @@ header {
 
                 label {
                     font-size: 18px;
+                }
+
+                input {
+                    appearance: none;
+                    background-color: #FFFFFF;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #DDDDDD;
+                    border-radius: 3px;
+                    outline: none;
+                    cursor: pointer;
+                    margin: 0 0.7em 0 0;
+                }
+
+                input:checked {
+                    background-image: url(../../src/checkmark.svg);
+                    background-repeat: no-repeat;
+                    background-size: 16px 16px;
+                    background-position: bottom center;
                 }
             }
         }
@@ -1028,12 +1052,12 @@ footer {
                     text-align: center;
     
                     h1 {
-                        font-size: 1.8em;
+                        font-size: 2.2em;
                         margin-top: 0;
                     }
 
                     h2 {
-                        font-size: 1.3em;
+                        font-size: 1em;
                     }
                 }
     
@@ -1131,6 +1155,7 @@ footer {
 
     footer {
         flex-direction: column;
+        justify-content: center;
 
         .footerLeft {
             width: 100%;
@@ -1158,8 +1183,9 @@ footer {
         }
 
         .footerRight {
-            width: 100%;
+            width: calc(100% - 2em);
             margin: 0;
+            padding: 4em 1em 4em 1em;
             justify-content: space-evenly;
 
             .footerRightCert {
@@ -1176,8 +1202,10 @@ footer {
 }
 
 @media (max-width: 520px) {
-    h1 {
-        font-size: 30px;
+    .lineLeft {
+        h1 {
+            text-align: center;
+        }
     }
 
     header {
@@ -1189,7 +1217,6 @@ footer {
                 }
             }
         }
-        
     }
     
     .price {
@@ -1201,6 +1228,13 @@ footer {
     }
 
     .productsContainer {
+        .widthContHolder {
+            .maxWidthCont {
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
         .infoLeft {
             h1 {
                 font-size: 1.5em;
