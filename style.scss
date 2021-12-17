@@ -484,6 +484,7 @@ header {
                 margin: 0 0 0 1em;
                 padding: 3em 0 1.5em 0;
                 max-width: 49%;
+                height: fit-content;
                 display: flex;
                 flex-flow: column;
                 justify-content: flex-start;
@@ -519,18 +520,24 @@ header {
                 }
             }
 
-            .grayRight {
+            .grayRight1 {
                 max-width: 49%;
-                margin: 0 1em 0 0;
+                margin: 0 1em -4em 0;
+                position: relative;
+                top: -4em;
+                left: 1em;
 
                 .grayImg1 {
                     max-width:120%;
                     max-height:120%;
                     height: auto;
-                    position: relative;
-                    top: -4em;
-                    left: 1em;
+                    
                 }
+            }
+
+            .grayRight2 {
+                max-width: 49%;
+                margin: 0 1em 0 0;
 
                 .grayImg2 {
                     max-width:120%;
@@ -1112,7 +1119,7 @@ footer {
     .graySection {
         .grayBg {
             .grayCont {
-                .grayRight {
+                .grayRight1, .grayRight2 {
                     display: none;
                 }
 
